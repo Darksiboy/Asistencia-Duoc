@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+    <ion-button slot="end" color="warning" [routerLink]="['/register']">Registrarse</ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Login</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-input [(ngModel)]="correo" label="Correo" placeholder="Ingrese su correo" labelPlacement="stacked" ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input [(ngModel)]="clave_1" label="Clave" placeholder="Ingrese su clave" labelPlacement="stacked" type="password"></ion-input>
+      </ion-item>
+      <div>
+
+        <ion-button (click)="ingresar()" [disabled]="correo=='' || clave_1==''" color="success" expand="block">Ingresar</ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
